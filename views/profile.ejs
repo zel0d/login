@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/head.ejs %>
+    <title>Profile</title>
+  </head>
+  <body>
+
+
+    <div class="header">
+      <div class="container">
+        <div class="logo">Profile</div>
+        <div class="user-menu">
+          <img src="<%= user.local.thumbnail %>" >
+          <% include partials/menu.ejs %>
+        </div>
+      </div>
+    </div>
+
+  <main>
+    <div class="container">
+      <h1><% include partials/name.ejs %></h1>
+    </div>
+  </main>
+
+  </body>
+</html>

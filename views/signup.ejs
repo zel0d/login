@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  </head>
+  <body>
+      <div class="header-big"></div>
+      <div class="login-container">
+
+      <div class="login-header">
+        <h1 class="login-title">Sign up</h1>
+        <p class="login-message">Best service. Free forever.</p>
+      </div>
+
+      <div class="login-social">
+        <a class="auth-twitter btn" href="/auth/twitter">
+          <img src="/pictures/Twitter-logo.png" style="height: 32px; width: 32px; margin-left: -10px; margin-right: 10px">
+          <p>Twitter</p>
+        </a>
+        <a class="auth-facebook btn" href="/auth/facebook">
+          <img src="/pictures/Facebook-logo.png" style="height: 18px; width: 18px; margin-right: 18px">
+          <p>Facebook</p>
+        </a>
+        <a class="auth-google btn" href="/auth/google">
+          <img src="/pictures/Google-logo.png" style="height: 18px; width: 18px; margin-right: 14px">
+          <p>Google</p>
+        </a>
+      </div>
+
+      <div class="separation"></div>
+
+      <!-- show any messages that come back with authentication -->
+      <% if (message.length > 0) { %>
+        <div class="btn"><%= message %></div>
+      <% } %>
+
+      <form class="form" action="/auth/signup" method="post">
+        <div class="input-name">
+          <input class="btn" type="text" name="first-name" placeholder="First name">
+          <input class="btn" type="text" name="last-name" placeholder="Last name">
+        </div>
+        <input class="btn" type="text" name="username" placeholder="Username">
+        <input class="btn" type="text" name="email" placeholder="Email">
+        <input class="btn" type="password" name="password" placeholder="Password">
+        <input class="submit-btn btn"type="submit" name="submit" value="Continue">
+      </form>
+
+    </div>
+
+    <div class="suggestion">
+      <p>Already have an account ? <a href="/auth/login">Log in</a></p>
+    </div>
+
+  </body>
+</html>

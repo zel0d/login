@@ -1,0 +1,21 @@
+<div class="menu-container">
+
+  <a class="menu-account" href="/profile">
+      <h2><%= user.twitter.username   ||
+              user.facebook.username  ||
+              user.google.username    ||
+              user.local.firstName + ' ' + user.local.lastName %></h2>
+      <p><%=  user.twitter.id   ||
+              user.facebook.id  ||
+              user.google.id    ||
+              user.local._id %></p>
+  </a>
+
+  <div class="separation"></div>
+
+  <div class="menu-section">
+    <a href="/">Home</a>
+    <a class="submit-btn" href="/auth/logout"><p>Log out</p></a>
+  </div>
+
+</div>

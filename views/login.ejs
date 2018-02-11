@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include partials/head.ejs %>
+    <title>Login</title>
+  </head>
+  <body>
+      <div class="header-big"></div>
+      <div class="login-container">
+
+      <div class="login-header">
+        <h1 class="login-title">Log in</h1>
+        <p class="login-message">Best service. Free forever.</p>
+      </div>
+
+      <div class="login-social">
+        <a class="auth-twitter btn" href="/auth/twitter">
+          <img src="/pictures/Twitter-logo.png" style="height: 32px; width: 32px; margin-left: -10px; margin-right: 10px">
+          <p>Twitter</p>
+        </a>
+        <a class="auth-facebook btn" href="/auth/facebook">
+          <img src="/pictures/Facebook-logo.png" style="height: 18px; width: 18px; margin-right: 18px">
+          <p>Facebook</p>
+        </a>
+        <a class="auth-google btn" href="/auth/google">
+          <img src="/pictures/Google-logo.png" style="height: 18px; width: 18px; margin-right: 14px">
+          <p>Google</p>
+        </a>
+      </div>
+
+      <div class="separation"></div>
+
+      <!-- show any messages that come back with authentication -->
+      <% if (message.length > 0) { %>
+        <div class="alert alert-danger"><%= message %></div>
+      <% } %>
+
+      <form class="form" action="/auth/login" method="post">
+        <input class="btn" type="text" name="username" placeholder="Username or Email">
+        <input class="btn" type="password" name="password" placeholder="Password">
+        <input class="submit-btn btn" type="submit" value="log in">
+      </form>
+
+    </div>
+
+    <div class="suggestion">
+      <p>Not a member ? <a href="/auth/signup">Sign up</a></p>
+    </div>
+
+  </body>
+</html>
